@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--Beige-BG);
+  /* background: var(--Beige-BG); */
+  height: 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input[type=password] {
+  font-family: "Segoe UI";
+}
+
+input::placeholder {
+  font-family: "Jua";
+}
+
+@font-face{
+  font-family: "Jua";
+  src: url("../public/fonts/BMJUA_otf.otf");
+}
+
+@font-face{
+  font-family: "Dongle";
+  src: url("../public/fonts/Dongle-Regular.ttf");
+}
+
+@font-face{
+  font-family: "Gugi";
+  src: url("../public/fonts/Gugi-Regular.ttf");
+}
+
+
+@font-face{
+  font-family: "Gaegu";
+  src: url("../public/fonts/Gaegu-Regular.ttf");
+}
+
+.ocean { 
+  height: 102px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFE294;
+  z-index: -10;
+}
+
+.wave {
+  background: url('../public/images/wave.svg') repeat-x; 
+  position: absolute;
+  bottom: 0;
+  width: 6400px;
+  height: 300px;
+  animation: wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: -10;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 12s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 14s ease -1.25s infinite;
+  opacity: 1;
+  z-index: -10;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0px,0,0);
+  }
+  50% {
+    transform: translate3d(-100px,0,0);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "short_name": "맘쏙",
+  "name": "우리 아이 마음 일기장, 맘쏙",
+  "icons": [
+    {
+      "src": "/icons/logo.svg",
+      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16",
+      "type": "image/svg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
